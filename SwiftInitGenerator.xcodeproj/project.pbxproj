@@ -61,7 +61,7 @@
 		E4D8F83721B0435200DF0B51 /* NSScanner+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSScanner+Swift.swift"; sourceTree = "<group>"; };
 		E4D8F83821B0435200DF0B51 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E4D8F83921B0435200DF0B51 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
-		E4E82B4A21B041F9008124BE /* Swift Init Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Init Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4E82B4A21B041F9008124BE /* SwiftInitGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftInitGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E82B4D21B041F9008124BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4E82B5121B041FA008124BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4E82B5421B041FA008124BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		E4E82B4B21B041F9008124BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4E82B4A21B041F9008124BE /* Swift Init Generator.app */,
+				E4E82B4A21B041F9008124BE /* SwiftInitGenerator.app */,
 				E4E82B5C21B041FA008124BE /* SwiftInitGeneratorTests.xctest */,
 				E4D8F82421B0424300DF0B51 /* Swift Init Generator.appex */,
 			);
@@ -205,7 +205,7 @@
 			);
 			name = SwiftInitGenerator;
 			productName = SwiftInitGenerator;
-			productReference = E4E82B4A21B041F9008124BE /* Swift Init Generator.app */;
+			productReference = E4E82B4A21B041F9008124BE /* SwiftInitGenerator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E4E82B5B21B041FA008124BE /* SwiftInitGeneratorTests */ = {
@@ -525,7 +525,7 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator;
-				PRODUCT_NAME = "Swift Init Generator";
+				PRODUCT_NAME = SwiftInitGenerator;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -545,7 +545,7 @@
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator;
-				PRODUCT_NAME = "Swift Init Generator";
+				PRODUCT_NAME = SwiftInitGenerator;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
