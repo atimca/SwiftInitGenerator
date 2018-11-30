@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E4D8F82721B0424300DF0B51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D8F82621B0424300DF0B51 /* Cocoa.framework */; };
-		E4D8F83121B0424300DF0B51 /* Swift Init Generator.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E4D8F82421B0424300DF0B51 /* Swift Init Generator.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E4D8F83121B0424300DF0B51 /* SourceEditorExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E4D8F82421B0424300DF0B51 /* SourceEditorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E4D8F83A21B0435200DF0B51 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83621B0435200DF0B51 /* SourceEditorCommand.swift */; };
 		E4D8F83B21B0435200DF0B51 /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83721B0435200DF0B51 /* NSScanner+Swift.swift */; };
 		E4D8F83C21B0435200DF0B51 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83821B0435200DF0B51 /* SourceEditorExtension.swift */; };
@@ -45,7 +45,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				E4D8F83121B0424300DF0B51 /* Swift Init Generator.appex in Embed App Extensions */,
+				E4D8F83121B0424300DF0B51 /* SourceEditorExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,7 +53,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E4D8F82421B0424300DF0B51 /* Swift Init Generator.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Swift Init Generator.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4D8F82421B0424300DF0B51 /* SourceEditorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SourceEditorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D8F82621B0424300DF0B51 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E4D8F82D21B0424300DF0B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D8F82E21B0424300DF0B51 /* SourceEditorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SourceEditorExtension.entitlements; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			children = (
 				E4E82B4A21B041F9008124BE /* SwiftInitGenerator.app */,
 				E4E82B5C21B041FA008124BE /* SwiftInitGeneratorTests.xctest */,
-				E4D8F82421B0424300DF0B51 /* Swift Init Generator.appex */,
+				E4D8F82421B0424300DF0B51 /* SourceEditorExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			);
 			name = SourceEditorExtension;
 			productName = SourceEditorExtension;
-			productReference = E4D8F82421B0424300DF0B51 /* Swift Init Generator.appex */;
+			productReference = E4D8F82421B0424300DF0B51 /* SourceEditorExtension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 		E4E82B4921B041F9008124BE /* SwiftInitGenerator */ = {
@@ -367,7 +367,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator.SourceEditorExtension;
-				PRODUCT_NAME = "Swift Init Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -389,7 +389,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator.SourceEditorExtension;
-				PRODUCT_NAME = "Swift Init Generator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
