@@ -4,7 +4,7 @@
 
 # Swift Init Generator
 
-[![Swift 4.2](https://img.shields.io/badge/swift-4.2-orange.svg?style=flat)](#) [![atimca](https://img.shields.io/badge/contact-atimca-blue.svg?style=flat)](http://t.me/atimca)
+[![Swift 5](https://img.shields.io/badge/swift-5-orange.svg?style=flat)](#) [![atimca](https://img.shields.io/badge/contact-atimca-blue.svg?style=flat)](http://t.me/atimca)
 
 **Swift Init Generator** is an Xcode Source Editor extension that makes it easy to generate your init, especially for public types.
 
