@@ -6,6 +6,13 @@
 import Foundation
 import XcodeKit
 
+enum GenerationError: Swift.Error {
+    case notSwiftLanguage
+    case noSelection
+    case invalidSelection
+    case parseError
+}
+
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
 
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Swift.Error?) -> Void) {
@@ -41,7 +48,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
                 + [String((invocation.buffer.lines[selection.end.line] as! String).utf8.prefix(selection.end.column))!]
         }
 
-        var initializer = try generate(
+        var initializer = Generator.generate(
             selection: selectedText,
             indentation: indentSequence(for: invocation.buffer),
             leadingIndent: leadingIndentation(from: selection, in: invocation.buffer)

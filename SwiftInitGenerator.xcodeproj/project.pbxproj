@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64F47454232A6FBE009E69FC /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F47453232A6FBE009E69FC /* Variable.swift */; };
+		64F47455232A6FBE009E69FC /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F47453232A6FBE009E69FC /* Variable.swift */; };
 		E4D8F82721B0424300DF0B51 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D8F82621B0424300DF0B51 /* Cocoa.framework */; };
 		E4D8F83121B0424300DF0B51 /* Swift Init Generator.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E4D8F82421B0424300DF0B51 /* Swift Init Generator.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E4D8F83A21B0435200DF0B51 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83621B0435200DF0B51 /* SourceEditorCommand.swift */; };
-		E4D8F83B21B0435200DF0B51 /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83721B0435200DF0B51 /* NSScanner+Swift.swift */; };
 		E4D8F83C21B0435200DF0B51 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83821B0435200DF0B51 /* SourceEditorExtension.swift */; };
 		E4D8F83D21B0435200DF0B51 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83921B0435200DF0B51 /* Generator.swift */; };
 		E4D8F83F21B0441200DF0B51 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83921B0435200DF0B51 /* Generator.swift */; };
-		E4D8F84021B0442400DF0B51 /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D8F83721B0435200DF0B51 /* NSScanner+Swift.swift */; };
 		E4E82B4E21B041F9008124BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E82B4D21B041F9008124BE /* AppDelegate.swift */; };
 		E4E82B5221B041FA008124BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E82B5121B041FA008124BE /* Assets.xcassets */; };
 		E4E82B5521B041FA008124BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E82B5321B041FA008124BE /* Main.storyboard */; };
@@ -53,12 +53,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64F47453232A6FBE009E69FC /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		E4D8F82421B0424300DF0B51 /* Swift Init Generator.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Swift Init Generator.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D8F82621B0424300DF0B51 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E4D8F82D21B0424300DF0B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D8F82E21B0424300DF0B51 /* SourceEditorExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SourceEditorExtension.entitlements; sourceTree = "<group>"; };
 		E4D8F83621B0435200DF0B51 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
-		E4D8F83721B0435200DF0B51 /* NSScanner+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSScanner+Swift.swift"; sourceTree = "<group>"; };
 		E4D8F83821B0435200DF0B51 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		E4D8F83921B0435200DF0B51 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		E4E82B4A21B041F9008124BE /* SwiftInitGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftInitGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +111,7 @@
 			children = (
 				E4D8F83E21B0435A00DF0B51 /* Helpers */,
 				E4D8F83921B0435200DF0B51 /* Generator.swift */,
+				64F47453232A6FBE009E69FC /* Variable.swift */,
 				E4D8F82D21B0424300DF0B51 /* Info.plist */,
 				E4D8F82E21B0424300DF0B51 /* SourceEditorExtension.entitlements */,
 			);
@@ -120,7 +121,6 @@
 		E4D8F83E21B0435A00DF0B51 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E4D8F83721B0435200DF0B51 /* NSScanner+Swift.swift */,
 				E4D8F83621B0435200DF0B51 /* SourceEditorCommand.swift */,
 				E4D8F83821B0435200DF0B51 /* SourceEditorExtension.swift */,
 			);
@@ -238,13 +238,15 @@
 				TargetAttributes = {
 					E4D8F82321B0424300DF0B51 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1100;
 					};
 					E4E82B4921B041F9008124BE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 					E4E82B5B21B041FA008124BE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 						TestTargetID = E4E82B4921B041F9008124BE;
 					};
 				};
@@ -303,7 +305,7 @@
 				E4D8F83A21B0435200DF0B51 /* SourceEditorCommand.swift in Sources */,
 				E4D8F83D21B0435200DF0B51 /* Generator.swift in Sources */,
 				E4D8F83C21B0435200DF0B51 /* SourceEditorExtension.swift in Sources */,
-				E4D8F83B21B0435200DF0B51 /* NSScanner+Swift.swift in Sources */,
+				64F47455232A6FBE009E69FC /* Variable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,8 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D8F84021B0442400DF0B51 /* NSScanner+Swift.swift in Sources */,
 				E4E82B6121B041FA008124BE /* SwiftInitGeneratorTests.swift in Sources */,
+				64F47454232A6FBE009E69FC /* Variable.swift in Sources */,
 				E4D8F83F21B0441200DF0B51 /* Generator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +372,7 @@
 				PRODUCT_NAME = "Swift Init Generator";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -391,7 +393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator.SourceEditorExtension;
 				PRODUCT_NAME = "Swift Init Generator";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -526,7 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator;
 				PRODUCT_NAME = SwiftInitGenerator;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -546,7 +548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator;
 				PRODUCT_NAME = SwiftInitGenerator;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -566,7 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftInitGenerator.app/Contents/MacOS/SwiftInitGenerator";
 			};
 			name = Debug;
@@ -587,7 +589,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftInitGenerator.app/Contents/MacOS/SwiftInitGenerator";
 			};
 			name = Release;

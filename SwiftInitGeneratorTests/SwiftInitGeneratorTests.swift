@@ -8,15 +8,11 @@ import XCTest
 class SwiftInitializerGeneratorTests: XCTestCase {
 
     func assert(input: [String], output: [String], file: StaticString = #file, line: UInt = #line) {
-        do {
-            let lines = try generate(selection: input, indentation: "    ", leadingIndent: "")
-            if(lines != output) {
-                XCTFail("Output is not correct; expected:\n\(output.joined(separator: "\n"))\n\ngot:\n\(lines.joined(separator: "\n"))",
-                    file: file,
-                    line: line)
-            }
-        } catch {
-            XCTFail("Could not generate initializer: \(error)", file: file, line: line)
+        let lines = Generator.generate(selection: input, indentation: "    ", leadingIndent: "")
+        if(lines != output) {
+            XCTFail("Output is not correct; expected:\n\(output.joined(separator: "\n"))\n\ngot:\n\(lines.joined(separator: "\n"))",
+                file: file,
+                line: line)
         }
     }
 
@@ -31,7 +27,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.a = a",
                 "    self.b = b",
                 "}"
-            ])
+        ])
     }
 
     func testNoProperties() {
@@ -42,7 +38,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
             ],
             output: [
                 "public init() { }"
-            ])
+        ])
     }
 
     func testEmptyLineInBetween() {
@@ -57,7 +53,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.a = a",
                 "    self.b = b",
                 "}"
-            ])
+        ])
     }
 
     func testSingleAccessModifier() {
@@ -71,7 +67,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.a = a",
                 "    self.b = b",
                 "}"
-            ])
+        ])
     }
 
     func testDoubleAccessModifier() {
@@ -85,7 +81,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.a = a",
                 "    self.b = b",
                 "}"
-            ])
+        ])
     }
 
 
@@ -99,6 +95,9 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "/*",
                 " * pay attention to this one",
                 " */",
+                "/*",
+                 "let b: Int",
+                 " */",
                 "let c: IBOutlet!"
             ],
             output: [
@@ -107,7 +106,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.b = b",
                 "    self.c = c",
                 "}"
-            ])
+        ])
     }
 
     func testDynamicVar() {
@@ -121,7 +120,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.a = a",
                 "    self.b = b",
                 "}"
-            ])
+        ])
     }
 
     func testEscapingClosure() {
@@ -130,7 +129,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "let a: (String) -> Int?",
                 "let b: () -> () -> Void",
                 "let c: ((String, Int))->()",
-                ],
+            ],
             output: [
                 "public init(a: @escaping (String) -> Int?,",
                 "            b: @escaping () -> () -> Void,",
@@ -139,7 +138,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.b = b",
                 "    self.c = c",
                 "}"
-            ])
+        ])
     }
 
     func testNoEscapingAttribute() {
@@ -155,7 +154,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.b = b",
                 "    self.c = c",
                 "}"
-            ])
+        ])
     }
 
     func testUnderscoredWillRemoveFromInitMethod() {
@@ -169,7 +168,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    _a = a",
                 "    self.b = b",
                 "}"
-            ])
+        ])
     }
 
     func testForExcludingImutablesPropertiesWithDefaultValue() {
@@ -179,7 +178,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
             ],
             output: [
                 "public init() { }"
-            ])
+        ])
     }
 
     func testForExcludingImutablesPropertiesWithDefaultValueAndKeepsOthers() {
@@ -194,7 +193,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.b = b",
                 "    self.c = c",
                 "}"
-            ])
+        ])
     }
 
     func testInOneValueCase() {
@@ -206,7 +205,7 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "public init(a: Int) {",
                 "    self.a = a",
                 "}"
-            ])
+        ])
     }
 
     func testForSkippingComputedProperties() {
@@ -223,6 +222,20 @@ class SwiftInitializerGeneratorTests: XCTestCase {
                 "    self.b = b",
                 "    self.c = c",
                 "}"
-            ])
+        ])
+    }
+
+    func testPrivateSetWillBeInTheInit() {
+        assert(
+            input: [
+                "let a: Int",
+                "private(set) var nom: String"
+            ],
+            output: [
+                "public init(a: Int, nom: String) {",
+                "    self.a = a",
+                "    self.nom = nom",
+                "}"
+        ])
     }
 }
