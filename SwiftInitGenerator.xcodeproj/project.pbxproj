@@ -368,6 +368,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator.SourceEditorExtension;
 				PRODUCT_NAME = "Swift Init Generator";
 				SKIP_INSTALL = YES;
@@ -390,6 +391,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator.SourceEditorExtension;
 				PRODUCT_NAME = "Swift Init Generator";
 				SKIP_INSTALL = YES;
@@ -526,6 +528,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator;
 				PRODUCT_NAME = SwiftInitGenerator;
 				SWIFT_VERSION = 5.0;
@@ -546,6 +549,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = atimca.com.SwiftInitGenerator;
 				PRODUCT_NAME = SwiftInitGenerator;
 				SWIFT_VERSION = 5.0;

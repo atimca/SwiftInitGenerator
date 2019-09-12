@@ -32,9 +32,6 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             throw GenerationError.noSelection
         }
 
-        print(selection.start.line, selection.start.column)
-        print(selection.end.line, selection.end.column)
-
         let selectedText: [String]
         if selection.start.line == selection.end.line {
             selectedText = [String(

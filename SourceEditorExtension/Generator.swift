@@ -11,7 +11,6 @@ enum Generator {
     /// - Parameter indentation:
     /// - Parameter leadingIndent:
     static func generate(selection: [String], indentation: String, leadingIndent: String) -> [String] {
-
         let variables = VariablesGenerator.generate(from: selection).filter { !$0.needToSkipInInitGeneration }
         guard !variables.isEmpty else { return ["public init() { }"] }
         let generatedInit = generateInit(variables.map(argument))
@@ -119,6 +118,7 @@ private enum VariablesGenerator {
         return selection
             .multiLineCommentsRemoved
             .map(removeSingleLineComment)
+            .map(removeNewLineSymbol)
             .map { $0.split(separator: " ") }
             .map(removeAllTypePrefixes)
             .map(convertPrepreparedArrayToVariable)
@@ -129,6 +129,14 @@ private enum VariablesGenerator {
         var mutable = string
         if let startOfComments = mutable.range(of: "//") {
             mutable.removeSubrange(startOfComments.lowerBound..<mutable.endIndex)
+        }
+        return mutable
+    }
+
+    private static func removeNewLineSymbol(for string: String) -> String {
+        var mutable = string
+        if let newLineSymbolPosition = mutable.range(of: "\n") {
+            mutable.removeSubrange(newLineSymbolPosition)
         }
         return mutable
     }
