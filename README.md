@@ -21,12 +21,24 @@
 
 ## Installation
 
+**Option 1:**
 - Download latest *SwiftInitGenerator* package from the [Releases](https://github.com/Atimca/SwiftInitGenerator/releases).
 - Copy *SwiftInitGenerator* to your *Applications* folder.
 - Launch *SwiftInitGenerator* once. You can close it immediately afterwards.
-- Go to <kbd>System Preferences</kbd> > <kbd>Extensions</kbd> > <kbd>Xcode Source Editor</kbd> > select <kbd>Swift Init Generator</kbd>
-
+- Go to <kbd>System Preferences</kbd> > <kbd>Extensions</kbd> > <kbd>Xcode Source Editor</kbd> > select <kbd>Swift Init Generator</kbd>  
+    
 ![Swift Init Generator - Installation](Recources/installation.png)
+
+If you have this alert:
+
+> “SwiftInitGenerator” can’t be opened because Apple cannot check it for malicious software.
+![malicious](Recources/malicious.png)
+
+Please watch this video for instruction steps:
+[![video](Recources/videofix.png)](https://youtu.be/T7LXprbqm3E)
+
+**Option 2:**
+- Just download source code and build it on your machine😉
 
 ## Setting Hotkey in Xcode
 
